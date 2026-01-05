@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<routes>
-    <!-- Add your API routes here -->
-    <!-- Example:
-    <route route_type="api" route_prefix="shadowcoders" controller="ShadowCoders\ShadowCoders:Api" context="api:shadowcoders"/>
-    -->
-</routes>

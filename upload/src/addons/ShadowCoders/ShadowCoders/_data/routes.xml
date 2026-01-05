@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<routes>
-    <!-- Add your routes here -->
-    <!-- Example:
-    <route route_type="public" route_prefix="shadowcoders" controller="ShadowCoders\ShadowCoders:Main" context="shadowcoders"/>
-    -->
-</routes>
