@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+    <template
+        type="public"
+        title="shadowcoders_setup.less"
+        version_id="1000000"
+    >
+        <![CDATA[
+        .u-blurContent {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            user-select: none;
+            pointer-events: none;
+            transition: filter 0.3s ease;
+        }
+
+        .u-blurOverlay {
+            position: relative;
+            z-index: 100;
+            margin-top: -60px;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, transparent, @xf-contentBg);
+
+            .blur-message {
+                font-weight: @xf-fontWeightHeavy;
+                margin-bottom: @xf-paddingMedium;
+            }
+        }
+        ]]>
+    </template>
+
+    <template type="public" title="shadowcoders_main" version_id="1000000">
+        <![CDATA[
+        <xf:css src="shadowcoders_setup.less" />
+        <xf:title>{{ phrase('shadowcoders_title') }}</xf:title>
+
+        <div class="block">
+            <div class="block-container">
+                <div class="block-body block-row">
+                    <xf:if is="!$xf.visitor.user_id">
+                        <div class="u-blurContent">
+                            <p>This is a preview of the high-quality content available to our registered members. Content BlurPro ensures that guests see the value of your community while encouraging them to join.</p>
+                        </div>
+                        <div class="u-blurOverlay">
+                            <div class="blur-message">Please register to view the full content of this post.</div>
+                            <xf:button href="{{ link('register') }}" class="button--cta" icon="login" data-xf-click="overlay">
+                                {{ phrase('register') }}
+                            </xf:button>
+                        </div>
+                    <xf:else />
+                        <p>Welcome back, <b>{$xf.visitor.username}</b>! You have full access to view all content because you are logged in.</p>
+                    </xf:if>
+                </div>
+            </div>
+        </div>
+        ]]>
+    </template>
+</templates>

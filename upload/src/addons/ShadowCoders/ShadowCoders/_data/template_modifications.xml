@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template_modifications>
+  <modification
+        type="public"
+        template="post_macros"
+        modification_key="shadowcoders_blur_posts"
+        description="Blurs post content"
+        execution_order="10"
+        action="str_replace"
+    >
+    <find><![CDATA[{{ bb_code($post.message, 'post', $post) }}]]></find>
+    <replace
+        ><![CDATA[<xf:if is="!$xf.visitor.hasPermission('general', 'bypassBlur')">
+	<xf:css src="shadowcoders_setup.less" />
+	<div class="u-blurContent">
+		$0
+	</div>
+	<div class="u-blurOverlay">
+		<div class="blur-message">{{ phrase('register_to_view_content') }}</div>
+		<xf:button href="{{ link('register') }}" class="button--cta" icon="login" data-xf-click="overlay">
+			{{ phrase('register') }}
+		</xf:button>
+	</div>
+<xf:else />
+	$0
+</xf:if>]]></replace>
+  </modification>
+  <modification
+        type="public"
+        template="PAGE_CONTAINER"
+        modification_key="shadowcoders_footer_credit"
+        description="Adds Shadow Coders footer credit"
+        execution_order="90"
+        action="str_replace"
+    >
+    <find><![CDATA[</footer>]]></find>
+    <replace
+        ><![CDATA[
+<div class="p-footer-row">
+	<div class="p-footer-row-main">
+		<div class="p-footer-copyright">
+			Parts of this forum are powered by <a href="https://shadowcoders.net" rel="nofollow noopener" target="_blank">Shadow Coders</a> Content Blur. &copy; Shadow Coders
+		</div>
+	</div>
+</div>
+</footer>]]></replace>
+  </modification>
+</template_modifications>
