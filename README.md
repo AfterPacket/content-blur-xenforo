@@ -44,7 +44,7 @@ The goal is simple:
 The add-on is distributed through the **XenForo Resource Manager**.
 
 ➡️ **Download / Purchase:**  
-[_Add your XenForo Resource URL here_
+[ ShadowCoders Fourm
 ](https://shadowcoders.net/resources/content-blur.1/)
 ---
 
