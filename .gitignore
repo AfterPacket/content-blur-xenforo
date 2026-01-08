@@ -1,25 +1,69 @@
-# CakePHP 3
+# ===============================
+# PHP / General
+# ===============================
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+*.swo
+*.orig
 
-/vendor/*
-/config/app.php
+# ===============================
+# Composer
+# ===============================
+/vendor/
+composer.lock
 
-/tmp/cache/models/*
-!/tmp/cache/models/empty
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
-/tmp/cache/views/*
-!/tmp/cache/views/empty
-/tmp/sessions/*
-!/tmp/sessions/empty
-/tmp/tests/*
-!/tmp/tests/empty
+# ===============================
+# PHP Debug / Profiling
+# ===============================
+.phpunit.result.cache
+phpunit.xml
+phpunit.xml.dist
+coverage/
+*.coverage
 
-/logs/*
-!/logs/empty
+# ===============================
+# Environment / Secrets
+# ===============================
+.env
+.env.*
+!.env.example
 
-# CakePHP 2
+# ===============================
+# OS / Editor Junk
+# ===============================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
+# ===============================
+# IDEs
+# ===============================
+.idea/
+.vscode/
+*.code-workspace
+
+# ===============================
+# XenForo-specific (safe defaults)
+# ===============================
+/src/addons/*/*/build/
+/src/addons/*/*/output/
+/src/addons/*/*/_output/
+/src/addons/*/*/vendor/
+
+/internal_data/
+data/
+js/
+styles/
+node_modules/
+
+# ===============================
+# Misc
+# ===============================
+*.zip
+*.tar
+*.tar.gz
+*.7z
